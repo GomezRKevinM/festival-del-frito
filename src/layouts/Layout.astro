@@ -1,15 +1,42 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+---
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores del caribe colombiano</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7b65116ce5.js" crossorigin="anonymous"></script>
+
+    <style>
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-brand-base font-sans text-brand-text antialiased">
+
+	<Header />
+	<slot />
+    <footer class="bg-brand-accent p-8 text-center text-amber-50">
+        <div class="container mx-auto">
+            <p class="font-semibold">Organizado por:</p>
+            <p class="text-sm">Danna Hernandez, Ximena Hadschini, Natalia Cortes, Gabriela Contreras.</p>
+            <p class="mt-6 text-sm opacity-70">&copy; 2026 Sabor Colombia. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
 </html>
 
 <style>

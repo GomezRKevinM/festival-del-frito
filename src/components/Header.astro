@@ -1,0 +1,17 @@
+---
+import Nav from './Nav.astro';
+---
+<header class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto flex flex-col items-center justify-between p-4 sm:flex-row">
+        <div class="font-serif flex items-center justify-center gap-2 text-3xl font-bold text-brand-primary">
+            <img class="size-10" src="/public/coctel-de-pina.png" alt="">
+            Sabores del Caribe Colombiano
+        </div>
+        <Nav />
+    </div>
+    <div class="w-screen h-3 flex sticky top-15 z-50 md:sticky md:top-96 md:z-10">
+    <span class="bg-brand-secondary" style="width: 40%;"></span>
+    <span class="bg-brand-accent" style="width: 30%;"></span>
+    <span class="bg-brand-primary" style="width: 30%;"></span>
+</div>
+</header>

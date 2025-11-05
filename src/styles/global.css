@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@plugin "@midudev/tailwind-animations";
+
+/* Tailwind v4 theme customization */
+@theme {
+	/* Fonts */
+	--font-sans: "Montserrat", sans-serif;
+	--font-serif: "Playfair Display", serif;
+
+	/* Brand colors */
+	--color-brand-base: #FFFBEB;       /* Amber 50 - Base gastronómica */
+	--color-brand-text: #292524;       /* Stone 800 - Texto café oscuro */
+	--color-brand-primary: #DC2626;    /* Red 600 - Acento bandera/pasión */
+	--color-brand-secondary: #FACC15;  /* Yellow 400 - Acento bandera/maíz */
+	--color-brand-accent: #1E3A8A;     /* Blue 900 - Acento bandera/noche */
+}

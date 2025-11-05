@@ -1,11 +1,190 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Galery from '../components/galery.astro';
 ---
 
 <Layout>
-	<Welcome />
+	 <main>
+        <section id="inicio" class="relative flex min-h-[80vh] items-center justify-center bg-cover bg-center text-center text-white" style="background-image: url('/festival.jpg')">
+            <div class="absolute inset-0 bg-black/60"></div>
+
+            <div class="relative z-10 flex flex-col items-center p-4">
+                <h1 class="font-serif text-5xl font-bold md:text-7xl">Sabores del Caribe Colombiano</h1>
+                <h2 class="mt-4 font-sans text-2xl font-light md:text-3xl">Un día lleno de sabor y raíces</h2>
+                
+                <div class="mt-8 text-lg">
+                    <p>15 de Octubre, 2026 | 4:00 PM - 10:00 PM</p>
+                    <p>Patio colonial de Getsemaní, Cartagena</p>
+                </div>
+                
+                <div id="countdown" class="mt-6 animate-pulse rounded-lg bg-black/30 p-4 font-mono text-2xl font-bold">
+                    Cargando temporizador...
+                </div>
+
+                <a href="#boletas" class="mt-10 transform rounded-lg bg-brand-primary px-10 py-4 text-xl font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-red-700 hover:shadow-2xl">
+                    Comprar Boletas
+                </a>
+            </div>
+        </section>
+
+        <section id="sobre" class="container mx-auto px-4 py-24 fade-in-section">
+            <h2 class="mb-12 text-center font-serif text-4xl font-bold text-brand-primary md:text-5xl">Nuestra Esencia</h2>
+            <p class="mx-auto mb-16 max-w-3xl text-center font-sans text-lg italic text-stone-700">
+                Desde antiguos tiempos nuestros antepasados, los fogones de nuestro caribe colombiano han contado historias familiares y de resistencia.
+                Sabor Colombia te invita a revivir esos hermosos recuerdos... es toda una experiencia llena de orgullo, sabor e identidad.
+            </p>
+            <Galery />
+
+            <h3 class="mb-10 text-center font-serif text-3xl font-bold text-stone-800">¿Qué encontrarás?</h3>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                
+                <div class="transform rounded-lg border-l-4 border-brand-primary bg-white p-6 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <h4 class="mb-2 font-serif text-2xl font-bold">🍴 Degustaciones</h4>
+                    <p class="text-stone-600">Recorrido sensorial por productos tradicionales, fritas típicas, dulces y bebidas.</p>
+                </div>
+                <div class="transform rounded-lg border-l-4 border-brand-primary bg-white p-6 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <h4 class="mb-2 font-serif text-2xl font-bold">🎶 Música y Danza</h4>
+                    <p class="text-stone-600">Presentaciones en vivo de tambores, cantos y danzas tradicionales.</p>
+                </div>
+                <div class="transform rounded-lg border-l-4 border-brand-primary bg-white p-6 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <h4 class="mb-2 font-serif text-2xl font-bold">🍳 Show de Cocina</h4>
+                    <p class="text-stone-600">Cocineros invitados preparando platos auténticos delante de tus ojos.</p>
+                </div>
+                <div class="transform rounded-lg border-l-4 border-brand-primary bg-white p-6 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <h4 class="mb-2 font-serif text-2xl font-bold">🎲 Interacción y Juegos</h4>
+                    <p class="text-stone-600">Juegos gastronómicos con premios y actividades para toda la familia.</p>
+                </div>
+                <div class="transform rounded-lg border-l-4 border-brand-primary bg-white p-6 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <h4 class="mb-2 font-serif text-2xl font-bold">📸 Zona de Fotos</h4>
+                    <p class="text-stone-600">Espacio con sombreros vueltiaos y frutas tropicales para tus recuerdos.</p>
+                </div>
+                <div class="transform rounded-lg border-l-4 border-brand-primary bg-white p-6 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <h4 class="mb-2 font-serif text-2xl font-bold">👨‍👩‍👧‍👦 Ambiente Familiar</h4>
+                    <p class="text-stone-600">Un evento para amantes de la gastronomía, turistas y familias.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="programa" class="bg-white py-24 fade-in-section">
+			<h2 class="mb-12 text-center font-serif text-4xl font-bold text-amber-900 md:text-5xl">Programa del Evento</h2>
+
+            <div class="container mx-auto px-4">
+                <div class="mx-auto max-w-3xl rounded-lg bg-gray-50 p-8 shadow-inner">
+                    <ul class="space-y-6">
+                        <li class="flex items-center text-lg"><strong class="mr-4 w-28 text-brand-primary">4:00 PM:</strong> Recepción y Coctel de Bienvenida</li>
+                        <li class="flex items-center text-lg"><strong class="mr-4 w-28 text-brand-primary">4:30 PM:</strong> Presentaciones Culturales</li>
+                        <li class="flex items-center text-lg"><strong class="mr-4 w-28 text-brand-primary">5:30 PM:</strong> Actividades de Interacción</li>
+                        <li class="flex items-center text-lg"><strong class="mr-4 w-28 text-brand-primary">6:30 PM:</strong> Gran Degustación y Show de Cocina</li>
+                        <li class="flex items-center text-lg"><strong class="mr-4 w-28 text-brand-primary">8:30 PM:</strong> Música Folclórica y Agradecimientos</li>
+                        <li class="flex items-center text-lg"><strong class="mr-4 w-28 text-brand-primary">10:00 PM:</strong> Cierre del Evento</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="boletas" class="container mx-auto px-4 py-24 fade-in-section">
+            <h2 class="mb-12 text-center font-serif text-4xl font-bold text-brand-primary md:text-5xl">Adquiere tus Boletas</h2>
+            
+            <div class="grid grid-cols-1 gap-12 lg:grid-cols-5 lg:items-start">
+                
+                <div class="transform rounded-xl border-4 border-dashed border-brand-primary bg-white p-8 text-center shadow-2xl animate-slide-in-left transition-all duration-500 delay-100 hover:shadow-xl lg:col-span-3">
+                    <h3 class="font-serif text-3xl font-bold">Acceso General</h3>
+                    <div class="my-4">
+                        <span class="text-6xl font-bold text-brand-primary">$80.000</span>
+                        <span class="text-stone-500">/ Por persona</span>
+                    </div>
+                    <hr class="my-6">
+                    <ul class="mb-8 space-y-3 text-left">
+                        <li class="flex items-center"><span class="mr-3 text-green-600">✔</span> Acceso general al evento</li>
+                        <li class="flex items-center"><span class="mr-3 text-green-600">✔</span> Show de cocina en vivo</li>
+                        <li class="flex items-center"><span class="mr-3 text-green-600">✔</span> Todas las degustaciones</li>
+                        <li class="flex items-center"><span class="mr-3 text-green-600">✔</span> Presentación musical</li>
+                    </ul>
+                    <a href="#" class="inline-block w-full transform rounded-lg bg-brand-primary px-10 py-4 text-xl font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-red-700 hover:shadow-2xl">
+                        Comprar Ahora
+                    </a>
+                </div>
+
+                <div class="flex flex-col animate-slide-in-right transition-all duration-500 delay-100 gap-6 lg:col-span-2">
+                    <div class="rounded-lg border-l-4 border-brand-accent bg-blue-50 p-6 shadow-lg">
+                        <h4 class="mb-2 font-serif text-2xl font-bold text-brand-accent">¡Aforo Limitado!</h4>
+                        <p class="text-stone-700">Evento exclusivo para <strong>800 personas</strong>. ¡No te quedes sin tu boleta!</p>
+                    </div>
+                    <div class="rounded-lg border-l-4 border-brand-secondary bg-yellow-50 p-6 shadow-lg">
+                        <h4 class="mb-2 font-serif text-2xl font-bold text-yellow-700">¡Preventa Especial!</h4>
+                        <p class="text-stone-700">Aprovecha un <strong>10% de descuento</strong> durante la última semana de preventa.</p>
+                    </div>
+                    <div class="rounded-lg border-l-4 border-red-400 bg-red-50 p-6 shadow-lg">
+                        <h4 class="mb-2 font-serif text-2xl font-bold">¡Oferta Familiar!</h4>
+                        <p class="text-stone-700">Niños menores de 10 años entran <strong>GRATIS</strong>.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+
+		// --- 1. Temporizador de Cuenta Regresiva ---
+		
+		// Establece la fecha del evento (15 de octubre de 2026 a las 4:00 PM)
+		const eventDate = new Date('Octuber 15, 2026 16:00:00').getTime();
+		const countdownElement = document.getElementById('countdown');
+
+		const countdownInterval = setInterval(() => {
+			const now = new Date().getTime();
+			const distance = eventDate - now;
+			
+			// Si el evento ya pasó
+			if (distance < 0) {
+				clearInterval(countdownInterval);
+				if (countdownElement) {
+					countdownElement.innerHTML = "¡El evento ha comenzado!";
+					countdownElement.classList.remove('animate-pulse'); // Quita la animación de pulso
+				}
+				return;
+			}
+
+			// Cálculos de tiempo
+			const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			
+			// Muestra el resultado
+			if (countdownElement) {
+				countdownElement.innerHTML = `Faltan: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+			}
+		}, 1000);
+
+		
+		// --- 2. Animación de Fade-in al hacer Scroll ---
+		
+		const sections = document.querySelectorAll('.fade-in-section');
+		
+		const observerOptions = {
+			root: null, // usa el viewport
+			rootMargin: '0px',
+			threshold: 0.1 // 10% del elemento debe ser visible
+		};
+
+		const observer = new IntersectionObserver((entries, observer) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('is-visible');
+					observer.unobserve(entry.target); // Deja de observar una vez que se ha animado
+				}
+			});
+		}, observerOptions);
+
+		sections.forEach(section => {
+			observer.observe(section);
+		});
+
+		// (El código de smooth scroll no es necesario,
+		// ya que añadimos 'class="scroll-smooth"' al <html> en Tailwind)
+
+	});
+	</script>
 </Layout>

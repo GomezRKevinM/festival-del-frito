@@ -1,0 +1,29 @@
+<div class="grid grid-cols-3 gap-2 p-4">
+
+    <div class="flex flex-col gap-2">
+        <img class="galery-img w-full h-48 object-cover transition-all duration-500 rounded-lg shadow-md" src="/arepas.jpg" alt="Galería de imágenes 1">
+        <img class="galery-img w-full h-48 object-cover transition-all duration-500 rounded-lg shadow-md" src="/centro.jpg" alt="Galería de imágenes 2">
+    </div>
+
+    <div class="flex flex-col gap-2">
+        <img class="galery-img w-full h-48 object-cover transition-all duration-500 rounded-lg shadow-md" src="/palenquera.jpg" alt="Galería de imágenes 5">
+        <img class="galery-img w-full h-48 object-cover transition-all duration-500 rounded-lg shadow-md" src="/palenqueras.jpg" alt="Galería de imágenes 6">
+    </div>
+
+    <div class="flex flex-col gap-2">
+        <img class="galery-img w-full h-48 object-cover transition-all duration-500 rounded-lg shadow-md" src="/empanadas_picante_sombreros.jpg" alt="Galería de imágenes 3">
+        <img class="galery-img w-full h-48 object-cover transition-all duration-500 rounded-lg shadow-md" src="/frutas.jpg" alt="Galería de imágenes 4">
+    </div>
+    
+</div>
+<script>
+    const images = document.querySelectorAll('.galery-img');
+    images.forEach(img => {
+        img.addEventListener('mouseover', () => {
+            img.classList.add('scale-105', 'shadow-xl');
+        });
+        img.addEventListener('mouseout', () => {
+            img.classList.remove('scale-105', 'shadow-xl');
+        });
+    });
+</script>
